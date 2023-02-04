@@ -35,7 +35,7 @@ export const getServerSideProps = async () => {
     netflixOriginals,
     trendingNow,
     topRated,
-    actionMovies,
+    actingMovies,
     comedyMovies,
     horrorMovies,
     romanceMovies,
@@ -61,6 +61,6 @@ export const getServerSideProps = async () => {
       horrorMovies: horrorMovies.results,
       romanceMovies: romanceMovies.results,
       documentaries: documentaries.results,
-    },
+      products,}
   }
 }
