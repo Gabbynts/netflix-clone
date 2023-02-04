@@ -23,7 +23,7 @@ function Banner({netflixOriginals}: Props) {
 
   return (
     <div className='flex flex-col space-y-2 md:space-y-4 lg:h-[65vh] lg:justify-end lg:pb-12'>
-      <div className="absolute -z-10 top-0 left-0 h-[95vh] w-screen">
+      <div className="absolute top-0 left-0 h-[95vh] w-screen">
         <NextImage 
           src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`} alt=""
           layout="fill"
@@ -37,7 +37,7 @@ function Banner({netflixOriginals}: Props) {
       </div>
 
       <div className='transform flex gap-x-3'>
-        <button className='bannerButton bg-white text-black'>
+        <button className='bannerButton -z-10 bg-white text-black'>
           <BsFillPlayFill className='h-4 w-4 text-black md:w-7 md:h-7 lg:w-9'/>Play</button>
         <button className='bannerButton bg-[gray]/70'>
           More Info <HiInformationCircle className='h-5 w-5 md:h-8 md:w-8'/>
