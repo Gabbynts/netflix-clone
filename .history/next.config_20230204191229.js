@@ -10,7 +10,7 @@ const nextConfig = {
   // Uncoment to add domain whitelist
   images: {
     domains: [
-      'image.tmdb.org',
+      'res.cloudinary.com',
     ],
   },
 

@@ -1,6 +1,6 @@
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
-import { Movie } from 'typings'
 
 import Banner from '@/components/layout/Banner'
 
@@ -17,20 +17,10 @@ interface Props {
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
+  products: Product[]
 }
 
-
-
-const Home = ({
-  netflixOriginals,
-  actionMovies,
-  comedyMovies,
-  documentaries,
-  horrorMovies,
-  romanceMovies,
-  topRated,
-  trendingNow,
-}: Props) => {
+const Home: NextPage = () => {
   return (
     <div className='relative h-screen bg-gradient-to-b from-[#555] to-[#161616]
     lg:h-[140vh]'>
@@ -41,7 +31,7 @@ const Home = ({
       <Header />
 
       <main>
-        <Banner netflixOriginals={netflixOriginals}/>
+        <Banner/>
         <section>
           
         </section>
