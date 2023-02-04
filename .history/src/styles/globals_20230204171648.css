@@ -106,10 +106,6 @@
     @apply text-[#fff] hover:text-[#b6b6b6] text-sm cursor-pointer
     transition duration-300 font-light
   }
-
-  .bannerButton{
-    @apply flex items-center gap-x-2
-  }
 }
 
 @layer utilities {

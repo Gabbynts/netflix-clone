@@ -34,6 +34,11 @@ function Banner({netflixOriginals}: Props) {
         <p className='max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl'>{movie?.overview}</p>
       </div>
 
+      <div>
+        <button>Play</button>
+        <button>More Info</button>
+      </div>
+
       
     </div>
   )

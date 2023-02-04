@@ -21,16 +21,8 @@ interface Props {
 
 
 
-const Home = ({
-  netflixOriginals,
-  actionMovies,
-  comedyMovies,
-  documentaries,
-  horrorMovies,
-  romanceMovies,
-  topRated,
-  trendingNow,
-}: Props) => {
+const Home = ({netflixOriginals}: Props) => {
+  console.log(netflixOriginals)
   return (
     <div className='relative h-screen bg-gradient-to-b from-[#555] to-[#161616]
     lg:h-[140vh]'>
@@ -41,7 +33,7 @@ const Home = ({
       <Header />
 
       <main>
-        <Banner netflixOriginals={netflixOriginals}/>
+        <Banner/>
         <section>
           
         </section>

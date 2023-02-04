@@ -8,11 +8,11 @@ const nextConfig = {
   swcMinify: true,
 
   // Uncoment to add domain whitelist
-  images: {
-    domains: [
-      'image.tmdb.org',
-    ],
-  },
+  // images: {
+  //   domains: [
+  //     'res.cloudinary.com',
+  //   ],
+  // },
 
   // SVGR
   webpack(config) {
