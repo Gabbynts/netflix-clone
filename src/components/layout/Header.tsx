@@ -1,3 +1,4 @@
+import clsx from "clsx"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import {BiSearch} from "react-icons/bi"
@@ -24,14 +25,18 @@ function Header() {
   }, [])
 
   return (
-    <header className={`${isScrolled && 'bg-[#000000]'}`}>
+    <header className={clsx(
+      `${isScrolled && 'bg-[#000000]'}`,
+      'sticky top-0 z-30 flex w-11/12 items-center justify-between',
+      'px-4 py-2 transition-all lg:px-10 lg:py-4',
+    )}>
       <div className="flex items-center space-x-2 md:space-x-9">
         <NextImage  
           src="/images/logo.png" 
           alt='netflix-logo'
           width={100}
           height={100}
-          className="cursor-pointer object-contain"/>
+          className="cursor-pointer"/>
 
         <ul className="hidden space-x-4 md:flex">
           <li className="headerLink">Home</li>
