@@ -1,21 +1,37 @@
 import Link from "next/link"
+import { useEffect, useState } from "react"
 import {BiSearch} from "react-icons/bi"
 import {HiBellAlert} from "react-icons/hi2"
 
 import NextImage from "@/components/NextImage"
 
-// import SeacrIcon from ""
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if(window.scrollY > 0) setIsScrolled (true)
+      else setIsScrolled(false)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+
+  }, [])
+
   return (
-    <header>
+    <header className={`${isScrolled && 'bg-[#000000]'}`}>
       <div className="flex items-center space-x-2 md:space-x-9">
         <NextImage  
           src="/images/logo.png" 
           alt='netflix-logo'
           width={100}
           height={100}
-          className="cursor-pointer"/>
+          className="cursor-pointer object-contain"/>
 
         <ul className="hidden space-x-4 md:flex">
           <li className="headerLink">Home</li>
