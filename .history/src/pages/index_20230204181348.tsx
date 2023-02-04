@@ -31,11 +31,11 @@ const Home: NextPage = () => {
 export default Home
 
 export const getServerSideProps = async () => {
-  const [
+  const[
     netflixOriginals,
     trendingNow,
     topRated,
-    actionMovies,
+    actingMovies,
     comedyMovies,
     horrorMovies,
     romanceMovies,
@@ -50,17 +50,4 @@ export const getServerSideProps = async () => {
     fetch(requests.fetchRomanceMovies).then((res) => res.json()),
     fetch(requests.fetchDocumentaries).then((res) => res.json()),
   ])
-
-  return{
-    props:{ 
-      netflixOriginals: netflixOriginals.results,
-      trendingNow: trendingNow.results,
-      topRated: topRated.results,
-      actionMovies: actionMovies.results,
-      comedyMovies: comedyMovies.results,
-      horrorMovies: horrorMovies.results,
-      romanceMovies: romanceMovies.results,
-      documentaries: documentaries.results,
-    },
-  }
 }
