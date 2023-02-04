@@ -70,6 +70,10 @@
     @apply font-primary text-base font-bold md:text-lg;
   }
 
+  body{
+    @apply bg-black text-white
+  }
+
   body,
   .p {
     @apply font-primary text-sm md:text-base;
@@ -89,6 +93,18 @@
   /* Class to adjust with sticky footer */
   .min-h-main {
     @apply min-h-[calc(100vh-56px)];
+  }
+
+  header{
+    @apply fixed top-0 z-30 flex w-11/12 items-center justify-between
+    px-4 py-4 transition-all lg:px-10 lg:py-6
+  }
+}
+
+@layer components{
+  .headerLink {
+    @apply text-[#fff] hover:text-[#b6b6b6] text-sm cursor-pointer
+    transition duration-300 font-light
   }
 }
 

@@ -1,31 +1,47 @@
-import * as React from 'react';
+import Link from "next/link"
+import {BiSearch} from "react-icons/bi"
+import {HiBellAlert} from "react-icons/hi2"
 
-import UnstyledLink from '@/components/links/UnstyledLink';
+import NextImage from "@/components/NextImage"
 
-const links = [
-  { href: '/', label: 'Route 1' },
-  { href: '/', label: 'Route 2' },
-];
+// import SeacrIcon from ""
 
-export default function Header() {
+function Header() {
   return (
-    <header className='sticky top-0 z-50 bg-white'>
-      <div className='layout flex h-14 items-center justify-between'>
-        <UnstyledLink href='/' className='font-bold hover:text-gray-600'>
-          Home
-        </UnstyledLink>
-        <nav>
-          <ul className='flex items-center justify-between space-x-4'>
-            {links.map(({ href, label }) => (
-              <li key={`${href}${label}`}>
-                <UnstyledLink href={href} className='hover:text-gray-600'>
-                  {label}
-                </UnstyledLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
+    <header>
+      <div className="flex items-center space-x-2 md:space-x-9">
+        <NextImage  
+          src="/images/logo.png" 
+          alt='netflix-logo'
+          width={100}
+          height={100}
+          className="cursor-pointer"/>
+
+        <ul className="hidden space-x-4 md:flex">
+          <li className="headerLink">Home</li>
+          <li className="headerLink">TV Shows</li>
+          <li className="headerLink">Movies</li>
+          <li className="headerLink">New & Popular</li>
+          <li className="headerLink">My List</li>
+        </ul>
       </div>
+
+      <div className="flex space-x-4 text-sm items-center font-light">
+        <BiSearch className="hidden w-6 h-6 sm:inline"/>
+        <p className="hidden lg:inline">Kids</p>
+        <HiBellAlert className="h-6 w-6"/>
+        <Link href="/account">
+          <NextImage 
+            src="/images/account-1.png" 
+            alt="account-1" 
+            width={24}
+            height={30}
+            className="cursor-pointer"/>
+        </Link>
+      </div>
+
     </header>
-  );
+  )
 }
+
+export default Header
