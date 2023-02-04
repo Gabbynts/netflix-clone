@@ -27,7 +27,7 @@ function Header() {
   return (
     <header className={clsx(
       `${isScrolled && 'bg-[#000000]'}`,
-      'sticky top-0 z-30 flex w-full items-center justify-between',
+      'sticky top-0 z-30 flex w-11/12 items-center justify-between',
       'px-4 py-2 transition-all lg:px-10 lg:py-4',
     )}>
       <div className="flex items-center space-x-2 md:space-x-9">
