@@ -9,7 +9,7 @@ interface Props{
 
 function Thumbnail({movie}: Props) {
   return (
-    <div className='relative h-28 min-w-[180px] transition hover:scale-110'>
+    <div className='relative h-28 min-w-[180px] scale-75'>
       <NextImage 
         src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path || movie.poster_path}`} 
         alt=''
