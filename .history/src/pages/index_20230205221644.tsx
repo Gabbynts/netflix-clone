@@ -30,9 +30,7 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-  const {logout, loading} = useAuth()
-
-  if(loading) return "Loading"
+  const {logout} = useAuth()
 
   return (
   <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
