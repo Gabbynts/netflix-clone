@@ -71,7 +71,7 @@
   }
 
   body{
-    @apply bg-black text-white !scrollbar-thin !scrollbar-track-transparent
+    @apply bg-black text-white !scrollbar !scrollbar-track-transparent
     !scrollbar-thumb-red-600
   }
 
