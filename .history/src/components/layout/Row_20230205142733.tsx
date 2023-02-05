@@ -32,10 +32,12 @@ function Row({title, movies}: Props) {
       
       <div className='group relative md:-ml-2'>
         <BsChevronRight className='chevron right-2 margin-auto' onClick={() => handleClick('right')}/>
-        <BsChevronLeft className={`chevron left-2 margin-auto ${!isMoved && 'hidden'}`} onClick={() => handleClick('left')}/>
+        <BsChevronLeft className={`absolute top-0 bottom-0 left-2 z-40 m-auto h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125 group-hover:opacity-100 ${
+            !isMoved && 'hidden'
+          }`}
+          onClick={() => handleClick('left')}/>
 
-
-        <div ref={rowRef} className='flex items-center space-x-0.5 md:space-x-2.5
+        <div className='flex items-center space-x-0.5 md:space-x-2.5
         md:p-2 overflow-x-scroll scrollbar-hide '>
           {movies.map((movie) => {
             return (

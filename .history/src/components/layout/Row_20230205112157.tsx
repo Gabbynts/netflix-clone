@@ -10,21 +10,13 @@ interface Props{
 }
 
 function Row({title, movies}: Props) {
-  const rowRef = useRef<HTMLDivElement>(null)
+  const rowRef=useRef(null)
   const [isMoved, setIsMoved] = useState(false)
 
   const handleClick = (direction: string) => {
     setIsMoved(true)
-    if (rowRef.current) {
-      const { scrollLeft, clientWidth } = rowRef.current
-
-      const scrollTo =
-        direction === 'left'
-          ? scrollLeft - clientWidth
-          : scrollLeft + clientWidth
-      rowRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' })
-    }
   }
+
   return (
     <div className='h-40 space-y-0.5 md:space-y-2'>
       <h2 className='w-56 cursor-pointer text-sm font-semibold text-[#afadad]
@@ -32,10 +24,10 @@ function Row({title, movies}: Props) {
       
       <div className='group relative md:-ml-2'>
         <BsChevronRight className='chevron right-2 margin-auto' onClick={() => handleClick('right')}/>
-        <BsChevronLeft className={`chevron left-2 margin-auto ${!isMoved && 'hidden'}`} onClick={() => handleClick('left')}/>
+        <BsChevronLeft className='chevron left-2 margin-auto' onClick={() => handleClick('left')}/>
+      
 
-
-        <div ref={rowRef} className='flex items-center space-x-0.5 md:space-x-2.5
+        <div className='flex items-center space-x-0.5 md:space-x-2.5
         md:p-2 overflow-x-scroll scrollbar-hide '>
           {movies.map((movie) => {
             return (
