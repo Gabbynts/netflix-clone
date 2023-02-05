@@ -1,12 +1,13 @@
+import Head from 'next/head'
 import React from 'react'
 import { Movie } from 'typings'
 
-import Layout from '@/components/layout/Layout'
 import Row from '@/components/Row'
-import Seo from '@/components/Seo'
 import Banner from '@/container/Banner'
 
 import requests from '@/utils/requests'
+
+import Header from '../components/layout/Header'
 
 interface Props {
   netflixOriginals: Movie[]
@@ -19,6 +20,8 @@ interface Props {
   documentaries: Movie[]
 }
 
+
+
 const Home = ({
   netflixOriginals,
   actionMovies,
@@ -30,25 +33,26 @@ const Home = ({
   trendingNow,
 }: Props) => {
   return (
-  <Layout>
-    <Seo />
-       <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
-        <main className='pl-4 pb-24 lg:space-y-24 lg:pl-16'>
-          <Banner netflixOriginals={netflixOriginals}/>
-            <section className='md:space-y-24'>
-              <Row title="Trending Now" movies={trendingNow} />
-              <Row title="Top Rated" movies={topRated} />
-              <Row title="Action Thrillers" movies={actionMovies} />
-              <Row title="Comedies" movies={comedyMovies} />
-              <Row title="Scary Movies" movies={horrorMovies} />
-              <Row title="Romance Movies" movies={romanceMovies} />
-              <Row title="Documentaries" movies={documentaries} />
-          </section>
+    <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
+      <Head>
+        <title>Login</title>
+      </Head>
+      
+      <Header />
+
+      <main className='pl-4 pb-24 lg:space-y-24 lg:pl-16'>
+        <Banner netflixOriginals={netflixOriginals}/>
+        <section className='md:space-y-24'>
+        <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Thrillers" movies={actionMovies} />
+          <Row title="Comedies" movies={comedyMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
+        </section>
       </main>
     </div>
-  </Layout>
-     
-
   )
 }
 
