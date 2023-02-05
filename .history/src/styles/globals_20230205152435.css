@@ -117,11 +117,6 @@
     @apply absolute top-11 bottom-0 z-40 h-9 w-9 cursor-pointer opacity-0 transition hover:scale-125
     group-hover:opacity-100
   }
-
-  .input{
-    @apply rounded bg-[#444444] px-5 py-3.5 placeholder-[#9c9c9c] border-transparent focus:border-transparent focus:ring-0
-    focus:bg-[#666666] w-full
-  }
 }
 
 @layer utilities {
