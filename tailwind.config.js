@@ -55,5 +55,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'), 
     require('tailwindcss-textshadow'),
-    require('tailwind-scrollbar-hide')],
+    require('tailwind-scrollbar-hide'),
+    require('tailwind-scrollbar'),],
 };
