@@ -33,7 +33,7 @@ const Home = ({
   trendingNow,
 }: Props) => {
   return (
-    <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
+    <div className='relative h-screen bg-gradie lg:h-[140vh]'>
       <Head>
         <title>Login</title>
       </Head>
