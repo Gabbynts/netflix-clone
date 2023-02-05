@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import useAuth from "hooks/useAuth"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import {BiSearch} from "react-icons/bi"
 import {HiBellAlert} from "react-icons/hi2"
@@ -8,7 +8,6 @@ import NextImage from "@/components/NextImage"
 
 
 function Header() {
-  const {logout} = useAuth()
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -52,15 +51,14 @@ function Header() {
         <BiSearch className="hidden w-6 h-6 sm:inline"/>
         <p className="hidden lg:inline">Kids</p>
         <HiBellAlert className="h-6 w-6"/>
-        {/* <Link href="/account"> */}
-          <NextImage
-            onClick={logout} 
+        <Link href="/account">
+          <NextImage 
             src="/images/account-1.png" 
             alt="account-1" 
             width={24}
             height={30}
             className="cursor-pointer"/>
-        {/* </Link> */}
+        </Link>
       </div>
 
     </header>
