@@ -11,7 +11,6 @@ const nextConfig = {
   images: {
     domains: [
       'image.tmdb.org',
-      'rb.gy'
     ],
   },
 

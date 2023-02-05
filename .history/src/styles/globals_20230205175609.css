@@ -119,8 +119,7 @@
   }
 
   .input{
-    @apply rounded bg-[#444444] px-5 py-3.5 placeholder-[#9c9c9c] border-transparent focus:border-transparent focus:ring-0
-    focus:bg-[#666666] w-full
+    @apply w-full rounded bg-[#333] px-5 py-3.5 placeholder-[gray]
   }
 }
 
