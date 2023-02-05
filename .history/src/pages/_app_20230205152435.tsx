@@ -1,7 +1,8 @@
-import { AuthProvider } from 'hooks/useAuth';
 import { AppProps } from 'next/app';
 
 import '@/styles/globals.css';
+// !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
+
 
 /**
  * !STARTERCONF info
@@ -9,10 +10,7 @@ import '@/styles/globals.css';
  */
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-  <AuthProvider>
-    <Component {...pageProps} />
-  </AuthProvider>)
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
