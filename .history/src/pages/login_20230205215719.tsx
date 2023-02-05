@@ -1,9 +1,10 @@
-import useAuth from 'hooks/useAuth'
 import React, { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import NextImage from '@/components/NextImage'
 import Seo from '@/components/Seo'
+
+import useAuth from '../hooks/useAuth'
 
 interface Inputs{
   email: string

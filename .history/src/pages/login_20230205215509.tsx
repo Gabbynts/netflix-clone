@@ -1,5 +1,5 @@
 import useAuth from 'hooks/useAuth'
-import React, { useState } from 'react'
+import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import NextImage from '@/components/NextImage'
@@ -12,7 +12,7 @@ interface Inputs{
 
 function login() {
   const [login, setLogin] = useState(false)
-  const {signIn, signUp} = useAuth()
+  const {} = useAuth()
 
   const {
     register,
