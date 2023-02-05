@@ -10,10 +10,10 @@ interface Inputs{
 }
 
 function login() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },} = useForm<Inputs>()
+  const { register, 
+    handleSubmit, 
+    watch, 
+    formState: { errors } } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
   
   return (
@@ -44,30 +44,10 @@ function login() {
         <h1 className='text-4xl'>Sign In</h1>
         <div className='space-y-4'>
           <label className='inline-block w-full'>
-            <input 
-              type="email" 
-              placeholder='Email' 
-              className='input'
-              {...register("email",{required: true})}
-            />
-            {errors.email && (
-              <p className="text-sm  text-orange-500">
-                Please enter a valid email.
-              </p>
-            )}
+            <input type="email" placeholder='Email' className='input'/>
           </label>
           <label className='inline-block w-full'>
-            <input 
-              type="password" 
-              placeholder='Password' 
-              className='input'
-              {...register("password",{required: true})}
-              />
-              {errors.password && (
-              <p className="text-sm  text-orange-500">
-                Your password must contain between 4 and 60 characters.
-              </p>
-            )}
+            <input type="password" placeholder='Password' className='input'/>
           </label>
         </div>
 

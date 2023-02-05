@@ -48,13 +48,10 @@ function login() {
               type="email" 
               placeholder='Email' 
               className='input'
-              {...register("email",{required: true})}
-            />
-            {errors.email && (
-              <p className="text-sm  text-orange-500">
+              {...register("email",{required: true})}/>
+              {errors.email && ( <p className="text-sm  text-orange-500">
                 Please enter a valid email.
               </p>
-            )}
           </label>
           <label className='inline-block w-full'>
             <input 
@@ -63,11 +60,6 @@ function login() {
               className='input'
               {...register("password",{required: true})}
               />
-              {errors.password && (
-              <p className="text-sm  text-orange-500">
-                Your password must contain between 4 and 60 characters.
-              </p>
-            )}
           </label>
         </div>
 

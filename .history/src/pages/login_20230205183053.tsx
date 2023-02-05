@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
 import NextImage from '@/components/NextImage'
 import Seo from '@/components/Seo'
@@ -10,11 +10,11 @@ interface Inputs{
 }
 
 function login() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },} = useForm<Inputs>()
-  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+  const { register, 
+    handleSubmit, 
+    watch, 
+    formState: { errors } } = useForm<Inputs>();
+  const onSubmit = data => console.log(data);
   
   return (
     <div className='relative flex h-screen w-screen flex-col bg-black
@@ -36,38 +36,15 @@ function login() {
         height={150}
       />
 
-      <form 
-        onSubmit={handleSubmit(onSubmit)}
-        className='bg-black/75 rounded relative mt-24 space-y-8 py-10 px-6 md:mt-0
-        md:max-w-md md:px-14'>
-          
+      <form className='bg-black/75 rounded relative mt-24 space-y-8 py-10 px-6 md:mt-0
+      md:max-w-md md:px-14'>
         <h1 className='text-4xl'>Sign In</h1>
         <div className='space-y-4'>
           <label className='inline-block w-full'>
-            <input 
-              type="email" 
-              placeholder='Email' 
-              className='input'
-              {...register("email",{required: true})}
-            />
-            {errors.email && (
-              <p className="text-sm  text-orange-500">
-                Please enter a valid email.
-              </p>
-            )}
+            <input type="email" placeholder='Email' className='input'/>
           </label>
           <label className='inline-block w-full'>
-            <input 
-              type="password" 
-              placeholder='Password' 
-              className='input'
-              {...register("password",{required: true})}
-              />
-              {errors.password && (
-              <p className="text-sm  text-orange-500">
-                Your password must contain between 4 and 60 characters.
-              </p>
-            )}
+            <input type="password" placeholder='Password' className='input'/>
           </label>
         </div>
 
