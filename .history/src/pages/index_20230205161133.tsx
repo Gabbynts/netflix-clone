@@ -29,7 +29,6 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-
   return (
   <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
   <Layout>

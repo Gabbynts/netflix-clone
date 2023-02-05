@@ -29,7 +29,8 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-
+  const {loading} = useAuth()
+  
   return (
   <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
   <Layout>
@@ -46,6 +47,7 @@ const Home = ({
             <Row title="Documentaries" movies={documentaries} />
          </section>
       </main>
+      <Modal />
   </Layout></div>
      
 

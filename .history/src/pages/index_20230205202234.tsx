@@ -46,6 +46,7 @@ const Home = ({
             <Row title="Documentaries" movies={documentaries} />
          </section>
       </main>
+      <Modal />
   </Layout></div>
      
 

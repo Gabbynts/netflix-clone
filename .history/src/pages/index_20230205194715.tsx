@@ -8,6 +8,8 @@ import Banner from '@/container/Banner'
 
 import requests from '@/utils/requests'
 
+import useAuth from '../hooks/useAuth'
+
 interface Props {
   netflixOriginals: Movie[]
   trendingNow: Movie[]
@@ -29,6 +31,7 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
+  const {loading} = useAuth()
 
   return (
   <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
@@ -46,6 +49,7 @@ const Home = ({
             <Row title="Documentaries" movies={documentaries} />
          </section>
       </main>
+      <Modal />
   </Layout></div>
      
 
