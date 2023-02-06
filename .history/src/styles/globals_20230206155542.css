@@ -124,7 +124,7 @@
   }
 
   .modalButton {
-    @apply border-[#6d6d6d] hover:border-white border-2 !z-30 h-9 w-9 bg-[#0e0d0d]/75 rounded-full flex justify-center hover:bg-[#333]/70
+    @apply border-[#6d6d6d] hover:border-white border-2 !z-30 h-8 w-8 bg-[#0e0d0d]/75 rounded-full flex justify-center hover:bg-[#333]/70
   }
 }
 
