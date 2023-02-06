@@ -1,12 +1,15 @@
 import useAuth from 'hooks/useAuth'
 import React from 'react'
+import { useRecoilValue } from 'recoil'
 import { Movie } from 'typings'
 
 import Layout from '@/components/layout/Layout'
+import Modal from '@/components/layout/Modal'
 import Row from '@/components/Row'
 import Seo from '@/components/Seo'
 import Banner from '@/container/Banner'
 
+import { modalState } from '@/atoms/modalAtoms'
 import requests from '@/utils/requests'
 
 interface Props {
@@ -30,9 +33,11 @@ const Home = ({
   topRated,
   trendingNow,
 }: Props) => {
-  const {logout, loading} = useAuth()
+  const {loading} = useAuth()
+  const showModal = useRecoilValue(modalState)
+  // const [showModal, setShowModal] = useState(false)
 
-  if(loading) return "Loading"
+  if(loading) return null
 
   return (
   <div className='relative h-screen bg-gradient-to-b lg:h-[140vh]'>
@@ -50,6 +55,7 @@ const Home = ({
             <Row title="Documentaries" movies={documentaries} />
          </section>
       </main>
+      <Modal />
   </Layout></div>
      
 
