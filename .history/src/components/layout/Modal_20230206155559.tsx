@@ -3,7 +3,6 @@ import {useEffect, useState} from 'react'
 import {AiOutlinePlus} from 'react-icons/ai'
 import {BiLike} from 'react-icons/bi'
 import {BsFillPlayFill} from 'react-icons/bs'
-import {FiVolume2,FiVolumeX} from 'react-icons/fi'
 import {IoCloseSharp} from 'react-icons/io5'
 import ReactPlayer from 'react-player'
 import { useRecoilState } from 'recoil'
@@ -69,8 +68,9 @@ function Modal() {
               playing
               muted={muted}
             />
-          <div className='absolute flex bottom-10 left-9'>
-            <div className='flex space-x-3 left-9'>
+          <div className='absolute bottom-10 left-9'>
+            <div className='flex space-x-3'>
+
               <button className='rounded flex items-center bg-[#fff] text-black gap-2
                                 px-8 font-bold text-xl transition hover:bg-[#acacac]'>
                 <BsFillPlayFill className=' text-black h-8 w-8' />
@@ -78,55 +78,17 @@ function Modal() {
               </button>
 
               <button className='modalButton'>
-                <AiOutlinePlus className='w-6 h-6 absolute top-[5px]'/>
+                <AiOutlinePlus className='w-6 h-6 absolute top-1'/>
               </button>
 
               <button className='modalButton'>
-                <BiLike className='h-6 w-6 absolute top-[5px]'/>
+                <BiLike className='h-6 w-6 absolute top-1'/>
               </button>
           </div>
 
-          <button 
-            className='modalButton'
-            onClick={() => setMuted(!muted)}>
-            {muted ? (
-              <FiVolumeX className='h-6 w-6 absolute top-[5px]'/>
-            ) : (
-              <FiVolume2 className='h-6 w-6 absolute top-[5px]'/>
-            )}
+          <button>
+            {muted ? (<l.)}
           </button>
-        </div>
-      </div>
-
-      <div className='px-10 py-8 rounded-b-md bg-[#252525]'>
-        <div className='space-y-6 text-lg'>
-          <div className='flex items-center space-x-2 text-sm'>
-            <p className='text-[#61e482] font-semibold'>{movie?.vote_average * 10}% Match</p>
-            <p className='font-light'>{movie?.release_date || movie?.first_air_date}</p>
-            <div className='border-white border h-4 flex items-center rounded px-1.5 text-xs'>
-              HD
-            </div>
-          </div>
-          
-          <div className='flex flex-col gap-x-10 gap-y-4 font-light md:flex-row'>
-            <p className='w-5/6'>{movie?.overview}</p>
-            <div className='text-sm'>
-              <div>
-                <span className='text-[#838383]'>Genres: </span>
-                {genres.map((genre) => genre.name).join(', ')}
-              </div>
-
-              <div>
-                <span className='text-[#838383]'>Original language: </span>
-                {movie?.original_language}
-              </div>
-
-              <div>
-                <span className='text-[#838383]'>Total votes: </span>
-                {movie?.vote_count}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

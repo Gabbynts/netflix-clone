@@ -4,7 +4,7 @@ import { Movie } from 'typings'
 
 import NextImage from '@/components/NextImage'
 
-import { modalState, movieState } from '@/atoms/modalAtoms'
+import { movieState } from '@/atoms/modalAtoms'
 
 interface Props{
   movie: Movie

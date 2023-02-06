@@ -51,7 +51,7 @@ function Modal() {
     <MuiModal 
       open={showModal} 
       onClose={handleClose}
-      className='fixed !top-7 left-0 right-0 mx-auto w-full max-w-5xl overflow-hidden
+      className='fixed !top-7 left-0  mx-auto w-full max-w-5xl overflow-hidden
                 overflow-y-scroll rounded-md scrollbar-hide'> 
       <>
       <button className='right-5 absolute top-5 !z-30 h-9 w-9 bg-[#0e0d0d]/75 rounded-full
@@ -95,38 +95,6 @@ function Modal() {
               <FiVolume2 className='h-6 w-6 absolute top-[5px]'/>
             )}
           </button>
-        </div>
-      </div>
-
-      <div className='px-10 py-8 rounded-b-md bg-[#252525]'>
-        <div className='space-y-6 text-lg'>
-          <div className='flex items-center space-x-2 text-sm'>
-            <p className='text-[#61e482] font-semibold'>{movie?.vote_average * 10}% Match</p>
-            <p className='font-light'>{movie?.release_date || movie?.first_air_date}</p>
-            <div className='border-white border h-4 flex items-center rounded px-1.5 text-xs'>
-              HD
-            </div>
-          </div>
-          
-          <div className='flex flex-col gap-x-10 gap-y-4 font-light md:flex-row'>
-            <p className='w-5/6'>{movie?.overview}</p>
-            <div className='text-sm'>
-              <div>
-                <span className='text-[#838383]'>Genres: </span>
-                {genres.map((genre) => genre.name).join(', ')}
-              </div>
-
-              <div>
-                <span className='text-[#838383]'>Original language: </span>
-                {movie?.original_language}
-              </div>
-
-              <div>
-                <span className='text-[#838383]'>Total votes: </span>
-                {movie?.vote_count}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
