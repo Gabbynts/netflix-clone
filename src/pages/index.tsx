@@ -55,7 +55,7 @@ const Home = ({
             <Row title="Documentaries" movies={documentaries} />
          </section>
       </main>
-      {showModal && <Modal />}
+      {showModal &&<Modal />}
   </Layout></div>
      
 
