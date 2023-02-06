@@ -9,9 +9,9 @@ import '@/styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-  // <AuthProvider>
+    // <AuthProvider>
     <Component {...pageProps} />)
-  {/* </AuthProvider>) */}
+   {/* </AuthProvider>)  */}
 }
 
 export default MyApp;
