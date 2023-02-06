@@ -69,7 +69,7 @@ function Modal() {
               playing
               muted={muted}
             />
-          <div className='absolute flex bottom-10 left-9 space-x-3'>
+          <div className='absolute flex bottom-10 left-9 space-x-2'>
             <div className='flex space-x-3 left-9'>
               <button className='rounded flex items-center bg-[#fff] text-black gap-2
                                 px-8 font-bold text-xl transition hover:bg-[#acacac]'>
