@@ -46,7 +46,7 @@ function Banner({netflixOriginals}: Props) {
           className='bannerButton bg-[gray]/70'
           onClick={() => {
             setShowModal(true)
-            setCurrentMovie(movie)
+            setCurrentMovie(false)
           }}>
             More Info 
           <HiInformationCircle className='h-5 w-5 md:h-8 md:w-8'/>

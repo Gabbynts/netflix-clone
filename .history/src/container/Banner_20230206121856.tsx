@@ -6,7 +6,6 @@ import { Movie } from 'typings'
 
 import NextImage from "@/components/NextImage"
 
-import { modalState, movieState } from '@/atoms/modalAtoms'
 import { baseUrl } from '@/constant/movie'
 
 
@@ -16,8 +15,8 @@ interface Props{
 
 function Banner({netflixOriginals}: Props) {
   const [movie, setMovie] = useState<Movie | null>(null)
-  const [showModal, setShowModal] = useRecoilState(modalState)
-  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
+  const [showModal, setShowModal] = useRecoilState(false)
+  const [currentMovie, setCurrentMovie] = useRecoilState(true)
 
 
   useEffect(() => {
@@ -46,7 +45,7 @@ function Banner({netflixOriginals}: Props) {
           className='bannerButton bg-[gray]/70'
           onClick={() => {
             setShowModal(true)
-            setCurrentMovie(movie)
+            setCurrentMovie(false)
           }}>
             More Info 
           <HiInformationCircle className='h-5 w-5 md:h-8 md:w-8'/>

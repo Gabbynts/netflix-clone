@@ -15,10 +15,10 @@ function Modal() {
   return (
     <MuiModal open={showModal} onClose={handleClose}> 
       <>
-      <button className='right-5 absolute top-5 !z-30 h-9 w-9 bg-[#0e0d0d]/75 rounded-full
-                        flex justify-center hover:bg-[#333]/75' 
+      <button className='right-5 absolute top-5 !z-30 h-11 w-9 bg-[#0e0d0d]/75 rounded-full
+                        justify-center flex ' 
               onClick={handleClose}>
-        <IoCloseSharp className ="h-6 w-6 mt-1" />
+        <IoCloseSharp className ="h-6 w-6" />
       </button>
       </>
     </MuiModal>
