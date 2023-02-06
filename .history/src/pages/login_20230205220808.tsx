@@ -78,15 +78,11 @@ function Login() {
           </label>
         </div>
 
-        <button className='w-full bg-[#ca2828] rounded h-11 font-semibold'
-                onClick={() => setLogin(true)}
-                type="submit">Sign In</button>
+        <button className='w-full bg-[#ca2828] rounded h-11 font-semibold'>Sign In</button>
         
         <div className='flex'>
           <p className='text-[#696969] pr-1'>New to Netflix?</p>
-          <button className='hover:underline'
-                  onClick={() => setLogin(false)}
-                  type="submit">Sign Up Now</button>
+          <button className='hover:underline'>Sign Up Now</button>
         </div>
       </form>
 

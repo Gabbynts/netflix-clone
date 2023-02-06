@@ -79,14 +79,12 @@ function Login() {
         </div>
 
         <button className='w-full bg-[#ca2828] rounded h-11 font-semibold'
-                onClick={() => setLogin(true)}
-                type="submit">Sign In</button>
+                onClick={() => setLogin(true)}>Sign In</button>
         
         <div className='flex'>
           <p className='text-[#696969] pr-1'>New to Netflix?</p>
           <button className='hover:underline'
-                  onClick={() => setLogin(false)}
-                  type="submit">Sign Up Now</button>
+                  onClick={() => setLogin(false)}>Sign Up Now</button>
         </div>
       </form>
 
