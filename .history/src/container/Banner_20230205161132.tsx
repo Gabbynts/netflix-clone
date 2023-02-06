@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import {BsFillPlayFill} from 'react-icons/bs'
 import {HiInformationCircle} from 'react-icons/hi'
-import { useRecoilState } from 'recoil'
 import { Movie } from 'typings'
 
 import NextImage from "@/components/NextImage"
 
-import { modalState, movieState } from '@/atoms/modalAtoms'
 import { baseUrl } from '@/constant/movie'
 
 
@@ -16,9 +14,6 @@ interface Props{
 
 function Banner({netflixOriginals}: Props) {
   const [movie, setMovie] = useState<Movie | null>(null)
-  const [showModal, setShowModal] = useRecoilState(modalState)
-  const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
-
 
   useEffect(() => {
     setMovie(netflixOriginals[Math.floor(Math.random() * netflixOriginals.length)])
@@ -42,14 +37,8 @@ function Banner({netflixOriginals}: Props) {
       <div className='transform flex gap-x-3'>
         <button className='bannerButton bg-white text-black'>
           <BsFillPlayFill className='h-4 w-4 text-black md:w-7 md:h-7 lg:w-9'/>Play</button>
-        <button 
-          className='bannerButton bg-[gray]/70'
-          onClick={() => {
-            setShowModal(true)
-            setCurrentMovie(movie)
-          }}>
-            More Info 
-          <HiInformationCircle className='h-5 w-5 md:h-8 md:w-8'/>
+        <button className='bannerButton bg-[gray]/70'>
+          More Info <HiInformationCircle className='h-5 w-5 md:h-8 md:w-8'/>
         </button>
       </div>
       
